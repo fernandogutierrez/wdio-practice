@@ -1,0 +1,19 @@
+{
+  "name": "webdriverio-cucumber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": ".\\node_modules\\.bin\\wdio",
+    "cucumber": ".\\node_modules\\.bin\\cucumber-js .\\src\\features\\"
+  },
+  "author": "fernando",
+  "license": "ISC",
+  "devDependencies": {
+    "selenium-standalone": "^6.15.1",
+    "wdio-allure-reporter": "^0.6.3",
+    "wdio-cucumber-framework": "^2.2.0",
+    "webdriverio": "^4.13.1"
+  },
+  "dependencies": {}
+}
