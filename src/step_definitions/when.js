@@ -9,6 +9,6 @@ When(/^I insert an invalid email$/, function () {
    contactPage.set_email('somerandomtext')
 });
 
-When(/^I press on Send$/, function () {
+When(/^I press on send$/, function () {
     contactPage.submit_form();
 });
