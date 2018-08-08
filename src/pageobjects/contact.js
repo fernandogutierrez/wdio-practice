@@ -20,6 +20,9 @@ class Contact {
         browser.submitForm("[class*=wpcf7-form]")
     }
 
+    is_text_visible(input_title, text_alert){
+        return browser.element(`p*=${input_title}`).element(`span=${text_alert}`).waitForVisible(5000)
+    }
 }
 
 module.exports = new Contact();
