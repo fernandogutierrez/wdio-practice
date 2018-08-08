@@ -10,6 +10,7 @@
   "author": "fernando",
   "license": "ISC",
   "devDependencies": {
+    "chai": "^4.1.2",
     "selenium-standalone": "^6.15.1",
     "wdio-allure-reporter": "^0.6.3",
     "wdio-cucumber-framework": "^2.2.0",
