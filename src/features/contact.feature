@@ -5,5 +5,5 @@ Feature: Test if email validation works as expected
     And I go to Contact page
     When I insert 'username'
     And I insert an invalid email
-    And I press on Send
+    And I press on send
     Then I see 'Email address seems invalid.' displayed below email field
