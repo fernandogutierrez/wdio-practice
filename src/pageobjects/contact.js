@@ -1,11 +1,11 @@
 class Contact {
 
     get name_input(){
-        return $$("input[name='your-name'])[0]");
+        return $$("input[name='your-name']")[0];
     }
 
     get email_input(){
-        return $$("input[name='your-email'])[0]")
+        return $$("input[name='your-email']")[0];
     }
 
     set_name(n_name){

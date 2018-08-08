@@ -1,11 +1,11 @@
 class TopMenu {
 
     get contact(){
-        browser.element('=Contact');
+        return browser.element('=Contact');
     }
 
     get blog(){
-        browser.element('=Blog');
+        return browser.element('=Blog');
     }
 
     go_to_contact(){
