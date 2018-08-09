@@ -3,5 +3,10 @@ const contactPage = require('../pageobjects/contact');
 
 
 Then(/^I see '(.*)' displayed below (email|name) field$/, function (alert, input) {
-    expect(contactPage.is_text_visible('Your Email (required)', alert)).to.be.true;
+    if(input === 'email'){
+        expect(contactPage.is_text_visible(alert, 'Your Email (required)')).to.be.true;
+    }
+    else if(input === 'name'){
+        expect(contactPage.is_text_visible(alert, 'Your Name (required)')).to.be.true;
+    }
 });
