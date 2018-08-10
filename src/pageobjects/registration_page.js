@@ -1,83 +1,98 @@
-class RegistationPage{
-    get first_name_txt(){
+class RegistrationPage{
+
+    get firstName(){
         return $$('#name_3_firstname')[0];
     }
 
-    get last_name_txt(){
+    get lastName(){
        return $$('#name_3_lastname')[0];
     }
 
-    get country_ddl(){
+    get country(){
         return $$('#dropdown_7')[0];
     }
 
-    get month_ddl(){
+    get month(){
         return $$('#mm_date_8')[0];
     }
 
-    get day_ddl(){
+    get day(){
         return $$('#dd_date_8')[0];
     }
 
-    get year_ddl(){
+    get year(){
         return $$('#yy_date_8')[0];
     }
 
-    get phonenumber_txt(){
+    get phoneNumber(){
         return $$("#phone_9")[0];
     }
 
-    get username_txt(){
+    get userName(){
         return $$("#username")[0];
     }
 
-    get email_txt(){
+    get email(){
         return $$("#email_1")[0];
     }
 
-    get password_txt(){
+    get password(){
         return $$("#password_2")[0];
     }
 
-    get passwordconfirm_txt(){
+    get confirmPassword(){
         return $$("#confirm_password_password_2")[0];
     }
 
-    get submit_btn(){
+    get submit(){
         return $("[name=pie_submit]");
     }
 
-    get marital_status_rdo(){
+    get maritalStatus(){
         return browser.element("//label[text()='Marital Status']/following-sibling::*");
     }
 
-    set marital_status(value){
-        this.marital_status_rdo.element(`[value=${single}]`)
+    get hobby(){
+        return $$("//label[text()='Hobby']/following-sibling::div[@class='radio_wrap']/descendant::input")
     }
 
+    setMaritalStatus(status) {
+        this.maritalStatus.element(`[value=${status}]`).click();
+    }
 
+    setHobby(nHobby){
+        this.hobby.forEach((chkHobby) => {if (chkHobby.getText() === nHobby){ chkHobby.click()}} )
+    }
+
+    selectCountry(country){
+        this.country.selectByValue(country);
+    }
+
+    setDateOfBirth(month, day, year){
+        this.month.selectByValue(month);
+        this.day.selectByValue(day);
+        this.year.selectByValue(year);
+    }
+
+    setPhoneNumber(phoneNumber){
+        this.phoneNumber.setValue(phoneNumber);
+    }
+
+    setUsername(username){
+        this.userName.setValue(username);
+    }
+
+    setEmail(email){
+        this.email.setValue(email);
+    }
+
+    setPassword(password){
+        this.password.setValue(password);
+    }
+
+    setConfirmPassword(password){
+        this.confirmPassword.setValue(password);
+    }
 }
-// var SIZE = {
-//     SMALL : {value: 0, name: "Small", code: "S"},
-//     MEDIUM: {value: 1, name: "Medium", code: "M"},
-//     LARGE : {value: 2, name: "Large", code: "L"}
-// };
-//
-// var currentSize = SIZE.MEDIUM;
-// if (currentSize == SIZE.MEDIUM) {
-//     // this alerts: "1: Medium"
-//     alert(currentSize.value + ": " + currentSize.name);
-// }
 
-export default new RegistationPage();
-// $$('#name_3_firstname')[0].setValue('heeleleo')
-
-// $$('#name_3_lastname')[0].setValue('heeleleo')
-
-
-
-
-// $("//label[text()='Hobby']/following::input[@value='dance']").isSelected()
-// $("//label[text()='Hobby']/following::input[@value='dance']").click()
-
-// $("//label[text()='Hobby']/following::input[@value='dance']").click()
+export default new RegistrationPage();
