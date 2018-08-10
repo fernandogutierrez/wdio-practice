@@ -9,3 +9,7 @@ Then(/^I see '(.*)' displayed below (email|name) field$/, function (alert, input
         expect(contactPage.isTextVisible(alert, 'Your Name (required)')).to.be.true;
     }
 });
+
+Then('I see the confirmation dialog openned', function () {
+
+});
