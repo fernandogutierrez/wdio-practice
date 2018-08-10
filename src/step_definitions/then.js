@@ -1,6 +1,5 @@
 const { Then } = require('cucumber');
-const contactPage = require('../pageobjects/contact');
-
+import contactPage from '../pageobjects/contact';
 
 Then(/^I see '(.*)' displayed below (email|name) field$/, function (alert, input) {
     if(input === 'email'){

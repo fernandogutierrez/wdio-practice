@@ -17,5 +17,4 @@ class TopMenu {
     }
 }
 
-module.exports  = new TopMenu();
-
+export default new TopMenu();

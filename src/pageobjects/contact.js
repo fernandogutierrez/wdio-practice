@@ -8,6 +8,10 @@ class Contact {
         return $$("input[name='your-email']")[0];
     }
 
+    get submit_btn(){
+        return $("[type=submit]");
+    }
+
     set_name(n_name){
         this.name_input.setValue(n_name);
     }
@@ -17,7 +21,7 @@ class Contact {
     }
 
     submit_form(){
-        browser.submitForm("[class*=wpcf7-form]")
+        this.submit_btn.click();
     }
 
     is_text_visible(text_alert, input_title){
@@ -25,4 +29,4 @@ class Contact {
     }
 }
 
-module.exports = new Contact();
+export default new Contact();
