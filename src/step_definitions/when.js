@@ -1,5 +1,5 @@
 const { When } = require('cucumber');
-import contactPage from '../pageobjects/contact';
+import contactPage from '../pageobjects/contact_page';
 
 
 When(/^I insert '(.*)'$/, function (name) {

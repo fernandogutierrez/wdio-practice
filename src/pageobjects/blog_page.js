@@ -1,4 +1,4 @@
-class Post{
+class BlogPage {
 
     go_to_post(post_title){
         return browser.element("//article[contains(@id,'post')]/" +

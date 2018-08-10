@@ -1,5 +1,5 @@
 const { Given } = require('cucumber');
-import topMenu from '../pageobjects/topmenu.js';
+import topMenu from '../pageobjects/top_menu.js';
 
 Given(/^I open '(.*)'$/, function (url_site) {
     browser.url(url_site);

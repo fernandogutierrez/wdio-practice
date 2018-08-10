@@ -1,4 +1,4 @@
-class Contact {
+class ContactPage {
 
     get name_input(){
         return $$("input[name='your-name']")[0];
@@ -29,4 +29,4 @@ class Contact {
     }
 }
 
-export default new Contact();
+export default new ContactPage();
