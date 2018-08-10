@@ -1,30 +1,30 @@
 class ContactPage {
 
-    get name_input(){
+    get name(){
         return $$("input[name='your-name']")[0];
     }
 
-    get email_input(){
+    get email(){
         return $$("input[name='your-email']")[0];
     }
 
-    get submit_btn(){
+    get submit(){
         return $("[type=submit]");
     }
 
-    set_name(n_name){
-        this.name_input.setValue(n_name);
+    setName(nName){
+        this.name.setValue(nName);
     }
 
-    set_email(n_email){
-        this.email_input.setValue(n_email);
+    setEmail(nEmail){
+        this.email.setValue(nEmail);
     }
 
-    submit_form(){
-        this.submit_btn.click();
+    submitForm(){
+        this.submit.click();
     }
 
-    is_text_visible(text_alert, input_title){
+    isTextVisible(text_alert, input_title){
         return $(`p*=${input_title}`).element(`span=${text_alert}`).waitForVisible(10000)
     }
 }

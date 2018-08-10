@@ -8,11 +8,11 @@ class TopMenu {
         return browser.element('=Blog');
     }
 
-    go_to_contact(){
+    goToContact(){
         this.contact.click();
     }
 
-    go_to_blog(){
+    goToBlog(){
         this.blog.click();
     }
 }

@@ -6,5 +6,5 @@ Given(/^I open '(.*)'$/, function (url_site) {
 });
 
 Given(/^I go to Contact page$/, function () {
-    topMenu.go_to_contact();
+    topMenu.goToContact();
 });

@@ -8,11 +8,13 @@ class RightMenu {
         return browser.element("//a[text()='Draggable']")
     }
 
-    get frameswindows(){
+    get framesWindows(){
         return browser.element("//a[text()='Frames and windows']")
     }
 
-    go_to_registration(){
+    goToRegistration(){
         return this.registration.click()
     }
 }
+
+export default new RightMenu();
