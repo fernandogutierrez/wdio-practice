@@ -10,6 +10,6 @@ Then(/^I see '(.*)' displayed below (email|name) field$/, function (alert, input
     }
 });
 
-Then('I see the confirmation dialog openned', function () {
+Then(/^I see the confirmation dialog openned$/, function () {
 
 });

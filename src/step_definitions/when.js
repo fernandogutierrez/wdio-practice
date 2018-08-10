@@ -14,50 +14,50 @@ When(/^I press on send$/, function () {
     contactPage.submitForm();
 });
 
-When('I insert {string} in first name field', function (string) {
+When(/^I insert '(.*)' in first name field$/, function (string) {
 
 });
 
-When('I insert {string} in last name field', function (string) {
+When(/^I insert '(.*)' in last name field$/, function (string) {
 
 });
 
-When('I set marital status as {string}', function (string) {
+When(/^I set marital status as '(Single|Married)'$/, function (string) {
 
 });
 
-When('I set the hobby as {string}', function (string) {
+When(/^I set the hobby as '(Reading|Dance|Cricket)'$/, function (string) {
 
 });
 
-When('I set the country as {string}', function (string) {
-    
-});
-
-When('I set the date of birth as {string}', function (string) {
+When(/^I set the country as '(.*)'$/, function (string) {
 
 });
 
-When('I insert {string} in phone number field', function (string) {
+When(/^I set the date of birth as '(.*)'$/, function (string) {
 
 });
 
-When('I insert {string} in username field', function (string) {
+When(/^I insert '[0-9]{7}' in phone number field$/, function (string) {
 
 });
 
-When('I insert {string} in email field', function (string) {
+When(/^I insert '(.*)' in username field$/, function (string) {
 
 });
 
-When('I insert {string} in password field', function (string) {
+When(/^I insert '(.*)' in email field$/, function (string) {
 
 });
 
-When('I retype {string} in confirm password field', function (string) {
+When(/^I insert '(.*)' in password field$/, function (string) {
 
 });
 
-When('I click on submit button', function () {
+When(/^I retype '(.*)' in confirm password field$/, function (string) {
+
+});
+
+When(/^I click on submit button$/, function () {
 
 });
