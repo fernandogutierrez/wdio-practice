@@ -1,5 +1,6 @@
 const { Then } = require('cucumber');
 import contactPage from '../pageobjects/contact_page';
+import registrationPage from '../pageobjects/registration_page';
 
 Then(/^I see '(.*)' displayed below (email|name) field$/, function (alert, input) {
     if(input === 'email'){
@@ -11,5 +12,5 @@ Then(/^I see '(.*)' displayed below (email|name) field$/, function (alert, input
 });
 
 Then(/^I see the confirmation dialog openned$/, function () {
-    browser.pause(15000);
+    expect(registrationPage.isSuccessRegMessageDisplayed()).to.be.true;
 });
