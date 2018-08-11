@@ -56,6 +56,10 @@ class RegistrationPage{
         return $$("//label[text()='Hobby']/following-sibling::div[@class='radio_wrap']/descendant::input")
     }
 
+    get successRegistrationMessage(){
+        return browser.element("//p[text()='Thank you for your registration']");
+    }
+
     setFirstName(fName) {
         this.firstName.setValue(fName);
     }
@@ -104,6 +108,10 @@ class RegistrationPage{
 
     submitForm(){
         this.submit.click();
+    }
+
+    isSuccessRegMessageDisplayed(){
+        return this.successRegistrationMessage.isVisible();
     }
 }
 
