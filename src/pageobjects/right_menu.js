@@ -13,7 +13,7 @@ class RightMenu {
     }
 
     goToRegistration(){
-        return this.registration.click()
+        this.registration.click()
     }
 }
 
