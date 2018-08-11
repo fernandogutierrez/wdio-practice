@@ -56,12 +56,20 @@ class RegistrationPage{
         return $$("//label[text()='Hobby']/following-sibling::div[@class='radio_wrap']/descendant::input")
     }
 
+    setFirstName(fName) {
+        this.firstName.setValue(fName);
+    }
+
+    setLastName(lName){
+        this.lastName.setValue(lName);
+    }
+
     setMaritalStatus(status) {
         this.maritalStatus.element(`[value=${status}]`).click();
     }
 
     setHobby(nHobby){
-        this.hobby.forEach((chkHobby) => {if (chkHobby.getText() === nHobby){ chkHobby.click()}} )
+        this.hobby.forEach((chkHobby) => { if (chkHobby.getValue().trim() === nHobby){ chkHobby.click()} } )
     }
 
     selectCountry(country){
@@ -74,8 +82,8 @@ class RegistrationPage{
         this.year.selectByValue(year);
     }
 
-    setPhoneNumber(phoneNumber){
-        this.phoneNumber.setValue(phoneNumber);
+    setPhoneNumber(pNumber){
+        this.phoneNumber.setValue("591" + pNumber);
     }
 
     setUsername(username){
@@ -92,6 +100,10 @@ class RegistrationPage{
 
     setConfirmPassword(password){
         this.confirmPassword.setValue(password);
+    }
+
+    submitForm(){
+        this.submit.click();
     }
 }
 
