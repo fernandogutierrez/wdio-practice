@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": ".\\node_modules\\.bin\\wdio",
-    "cucumber": ".\\node_modules\\.bin\\cucumber-js .\\src\\features\\"
+    "cucumber": "node_modules/.bin/cucumber-js ./src/features",
+    "selenium-start": "node_modules/.bin/selenium-standalone start",
+    "allure-report": "node_modules/.bin/allure generate ./allure-results -c && allure open",
+    "test": "node node_modules/webdriverio/bin/wdio"
   },
   "author": "fernando",
   "license": "ISC",
