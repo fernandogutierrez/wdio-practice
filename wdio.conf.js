@@ -124,10 +124,18 @@ exports.config = {
     // The only one supported by default is 'dot'
     // see also: http://webdriver.io/guide/reporters/dot.html
     reporters: ['allure'],
+
+    reporterOptions: {
+        allure: {
+            outputDir:   './allure-results/',
+            disableWebdriverStepsReporting: false,
+            useCucumberStepReporter: false,
+        },
+    },
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
-        require: ['./src/step_definitions/given.js', './src/step_definitions/when.js', './src/step_definitions/then.js'],        // <string[]> (file/dir) require files before executing features
+        require: ['./src/step_definitions/*.js'],        // <string[]> (file/dir) require files before executing features
         backtrace: false,   // <boolean> show full backtrace for errors
         compiler: ['js:babel-core/register'],       // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
         dryRun: false,      // <boolean> invoke formatters without executing step_definitions
