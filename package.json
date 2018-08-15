@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cucumber": "node_modules/.bin/cucumber-js ./src/features",
+    "cucumber": "node node_modules/.bin/cucumber-js ./src/features",
     "selenium-start": "node_modules/.bin/selenium-standalone start",
     "allure-report": "node_modules/.bin/allure generate ./allure-results -c && allure open",
     "test": "node node_modules/webdriverio/bin/wdio"
